@@ -1,0 +1,13 @@
+#All path MUST start by /api/
+
+index:
+   path: /api/
+   controller: App\Controller\DefaultController::index
+
+index_detailed_url:
+   path: /api/index
+   controller: App\Controller\DefaultController::index
+
+api_files_upload:
+    path: /api/files/upload
+    controller: App\Files\FilesUploadController::sampleAnswer
