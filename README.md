@@ -28,7 +28,7 @@ Run your cmd from "*www\GKAMeme\phpGKAMeme*" and do a "***composer install***"
 To run the server, launch your wamp
 
 
-# RUN
+# LOCAL RUN
 ## API server
 Run your wamp
 
