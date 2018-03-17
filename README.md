@@ -26,3 +26,12 @@ To run the server, input "***ng serve --host GKAMeme --proxy-config proxy.conf.j
 Make sure you've got **composer** installed and set in your PATH environment variable.
 Run your cmd from "*www\GKAMeme\phpGKAMeme*" and do a "***composer install***"
 To run the server, launch your wamp
+
+
+# RUN
+## API server
+Run your wamp
+
+## Angular server
+Run cmd from your angular file (here GKAMeme/angularGKAMeme)
+Run "ng serve"
