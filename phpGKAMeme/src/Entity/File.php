@@ -71,7 +71,7 @@ class File
 
     /**
      * Many Features have One Product.
-     * @ORM\ManyToOne(targetEntity="Users", inversedBy="files")
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="files")
      * @ORM\JoinColumn(name="uploader_id", referencedColumnName="id")
      */
     private $uploader;
@@ -79,4 +79,222 @@ class File
     public function __construct() {
         $this->tags = new \Doctrine\Common\Collections\ArrayCollection();
     }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPath()
+    {
+        return $this->path;
+    }
+
+    /**
+     * @param mixed $path
+     */
+    public function setPath($path): void
+    {
+        $this->path = $path;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWeight()
+    {
+        return $this->weight;
+    }
+
+    /**
+     * @param mixed $weight
+     */
+    public function setWeight($weight): void
+    {
+        $this->weight = $weight;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSizeX()
+    {
+        return $this->sizeX;
+    }
+
+    /**
+     * @param mixed $sizeX
+     */
+    public function setSizeX($sizeX): void
+    {
+        $this->sizeX = $sizeX;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSizeY()
+    {
+        return $this->sizeY;
+    }
+
+    /**
+     * @param mixed $sizeY
+     */
+    public function setSizeY($sizeY): void
+    {
+        $this->sizeY = $sizeY;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUploadDate()
+    {
+        return $this->uploadDate;
+    }
+
+    /**
+     * @param mixed $uploadDate
+     */
+    public function setUploadDate($uploadDate): void
+    {
+        $this->uploadDate = $uploadDate;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSeen()
+    {
+        return $this->seen;
+    }
+
+    public function incrementSeen()
+    {
+        $this->setSeen($this->getSeen()+1);
+    }
+
+    /**
+     * @param mixed $seen
+     */
+    private function setSeen($seen): void
+    {
+        $this->seen = $seen;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLikes()
+    {
+        return $this->likes;
+    }
+
+    public function incrementLikes(): void
+    {
+        $this->setLikes($this->getLikes()+1);
+    }
+
+    /**
+     * @param mixed $likes
+     */
+    private function setLikes($likes): void
+    {
+        $this->likes = $likes;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDownloaded()
+    {
+        return $this->downloaded;
+    }
+
+    public function incrementDownloaded(): void
+    {
+        $this->setDownloaded($this->getDownloaded()+1);
+    }
+
+    /**
+     * @param mixed $downloaded
+     */
+    private function setDownloaded($downloaded): void
+    {
+        $this->downloaded = $downloaded;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getisPrivate()
+    {
+        return $this->isPrivate;
+    }
+
+    /**
+     * @param mixed $isPrivate
+     */
+    public function setIsPrivate($isPrivate): void
+    {
+        $this->isPrivate = $isPrivate;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * @param mixed $tags
+     */
+    public function setTags($tags): void
+    {
+        $this->tags = $tags;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUploader()
+    {
+        return $this->uploader;
+    }
+
+    /**
+     * @param mixed $uploader
+     */
+    public function setUploader($uploader): void
+    {
+        $this->uploader = $uploader;
+    }
+
+
+
 }

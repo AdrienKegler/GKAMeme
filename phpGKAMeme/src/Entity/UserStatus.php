@@ -21,4 +21,30 @@ class UserStatus
      */
     private $name;
 
+
+    public function __construct() {}
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getObjectById()
+    {
+       return $this->getDoctrine()
+                    ->getRepository(Product::class)
+                    ->find($id);
+    }
+
 }

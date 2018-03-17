@@ -42,12 +42,14 @@ class Tag
     private $files;
 
     /**
+     * As tags, they're related to me
      * Many Tags have Many Tags.
      * @ORM\ManyToMany(targetEntity="Tag", mappedBy="myFriends")
      */
     private $tagsRelatedToMe;
 
     /**
+     * As a tag, I'm related to them
      * Many Tags have many Tags.
      * @ORM\ManyToMany(targetEntity="Tag", inversedBy="friendsWithMe")
      * @ORM\JoinTable(name="friends",
@@ -64,4 +66,112 @@ class Tag
         $this->tagsRelatedToMe = new \Doctrine\Common\Collections\ArrayCollection();
         $this->myRelatedTags = new \Doctrine\Common\Collections\ArrayCollection();
     }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLikes()
+    {
+        return $this->likes;
+    }
+
+    /**
+     * @param mixed $likes
+     */
+    public function setLikes($likes): void
+    {
+        $this->likes = $likes;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDscrp()
+    {
+        return $this->dscrp;
+    }
+
+    /**
+     * @param mixed $dscrp
+     */
+    public function setDscrp($dscrp): void
+    {
+        $this->dscrp = $dscrp;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFiles()
+    {
+        return $this->files;
+    }
+
+    /**
+     * @param mixed $files
+     */
+    public function setFiles($files): void
+    {
+        $this->files = $files;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTagsRelatedToMe()
+    {
+        return $this->tagsRelatedToMe;
+    }
+
+    /**
+     * @param mixed $tagsRelatedToMe
+     */
+    public function setTagsRelatedToMe($tagsRelatedToMe): void
+    {
+        $this->tagsRelatedToMe = $tagsRelatedToMe;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMyRelatedTags()
+    {
+        return $this->myRelatedTags;
+    }
+
+    /**
+     * @param mixed $myRelatedTags
+     */
+    public function setMyRelatedTags($myRelatedTags): void
+    {
+        $this->myRelatedTags = $myRelatedTags;
+    }
+
+
+
 }
