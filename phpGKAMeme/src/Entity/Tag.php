@@ -12,7 +12,7 @@ class Tag
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", name="Tag_id")
      */
     private $id;
 
@@ -32,34 +32,38 @@ class Tag
      */
     private $dscrp;
 
-    /** Ci-dessous : liens extérieurs */
+    /* Ci-dessous : liens extérieurs */
 
     /**
      * Many Tags have Many Files.
      * @ORM\ManyToMany(targetEntity="File", inversedBy="tags")
-     * @ORM\JoinTable(name="Tags_Files")
+     * @ORM\JoinTable(name="Tags_Files",
+     *     joinColumns={@ORM\JoinColumn(name="Tag_id", referencedColumnName="Tag_id")},
+     *     inverseJoinColumns={@ORM\JoinColumn(name="File_id", referencedColumnName="File_id")}
+     *     )
      */
     private $files;
 
     /**
      * As tags, they're related to me
      * Many Tags have Many Tags.
-     * @ORM\ManyToMany(targetEntity="Tag", mappedBy="myFriends")
+     * @ORM\ManyToMany(targetEntity="Tag", mappedBy="myRelatedTags")
      */
     private $tagsRelatedToMe;
 
     /**
      * As a tag, I'm related to them
      * Many Tags have many Tags.
-     * @ORM\ManyToMany(targetEntity="Tag", inversedBy="friendsWithMe")
-     * @ORM\JoinTable(name="friends",
-     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
-     *      inverseJoinColumns={@ORM\JoinColumn(name="friend_user_id", referencedColumnName="id")}
+     * @ORM\ManyToMany(targetEntity="Tag", inversedBy="tagsRelatedToMe")
+     * @ORM\JoinTable(name="relatedTags",
+     *      joinColumns={@ORM\JoinColumn(name="Tag_id", referencedColumnName="Tag_id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="Tag_related", referencedColumnName="Tag_id")}
      *      )
      */
     private $myRelatedTags;
 
 
+    /* Construct et getters/setters */
 
     public function __construct() {
         $this->files = new \Doctrine\Common\Collections\ArrayCollection();

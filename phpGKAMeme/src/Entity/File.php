@@ -70,9 +70,9 @@ class File
     private $tags;
 
     /**
-     * Many Features have One Product.
+     * Many Files have One Uploader.
      * @ORM\ManyToOne(targetEntity="User", inversedBy="files")
-     * @ORM\JoinColumn(name="uploader_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="uploader_id", referencedColumnName="User_id")
      */
     private $uploader;
 
