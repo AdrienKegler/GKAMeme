@@ -1,5 +1,10 @@
-.navbar-logo{
-  height: 5vh;
+
+img.bg-white.rounded-circle{
+  height: 3vh;
+}
+
+div.dropdown-menu.dropdown-menu-right{
+  min-width: unset;
 }
 
 
@@ -20,10 +25,14 @@
 
 /*Bootstrap -sm*/
 @media (min-width: 576px) and (max-width: 767px) {
-
+  #UserName{
+    display: none;
+  }
 }
 
 /*Bootstrap -xs/none */
 @media (max-width: 575px) {
-
+  #UserName{
+    display: none;
+  }
 }

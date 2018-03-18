@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainNavBarComponent implements OnInit {
 
+  logged = <boolean> true;
+  faUserDropdown = <string> "Memers" ;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  updateFaUserDropdown(newFaUserDropdownText){
+    this.faUserDropdown = newFaUserDropdownText;
   }
 
 }

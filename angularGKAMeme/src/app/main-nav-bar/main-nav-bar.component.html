@@ -1,5 +1,56 @@
-<nav class="navbar bg-inverse">
-  <a class="mx-auto my-2" href="/">
-    <img class="navbar-brand" src="assets/Pictures/G KA meme logo small.png">
-  </a>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+  <div class="d-flex flex-row w-100">
+
+    <!--Left Group-->
+    <ul class="navbar-nav col-sm-4 d-flex justify-content-around">
+      <li class="nav-item navbar-text">
+        <a class="nav-link" routerLink="/random"><i class="fa fa-random"></i> Random</a>
+      </li>
+      <li class="nav-item navbar-text">
+        <a class="nav-link" routerLink="/tags"><i class="fa fa-tags"></i> Tags</a>
+      </li>
+      <li class="nav-item d-flex dropdown">
+        <a class="nav-link my-auto p-0 navbar-text" routerLink="/{{ faUserDropdown }}">
+          <i class="fa fa-users"></i> {{ faUserDropdown }}
+        </a>
+        <a class="nav-link dropdown-toggle my-auto p-0 navbar-text" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" (click)="updateFaUserDropdown('Memers')" routerLink="/Memers">Memers</a>
+          <a class="dropdown-item" (click)="updateFaUserDropdown('Groups')" routerLink="/Groups">Groups</a>
+        </div>
+      </li>
+      <li class="nav-item navbar-text">
+        <a class="nav-link" routerLink="/info"><i class="fa fa-info-circle"></i> Info</a>
+      </li>
+    </ul>
+
+    <!-- Logo center-->
+    <ul class="navbar-nav col-sm-4">
+      <a class="navbar-brand d-block m-auto" href="/index">
+        <img class="navbar-logo mx-auto d-block" src="assets/Pictures/G KA meme logo small.png">
+      </a>
+    </ul>
+
+
+    <!--Right group-->
+    <ul class="navbar-nav col-sm-4 d-flex justify-content-around">
+      <li class="nav-item navbar-text">
+        <form class="form-inline my-auto">
+          <div class="btn-group">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            <label class="btn btn-secondary">
+              <input type="submit" hidden><i class="fa fa-search"></i>
+            </label>
+          </div>
+        </form>
+      </li>
+      <app-user-logged-right-part-nav-bar class="d-flex justify-content-around" *ngIf="logged; else visitorTmpl"></app-user-logged-right-part-nav-bar>
+    </ul>
+  </div>
 </nav>
+
+
+<ng-template #visitorTmpl>
+  <app-visitor-right-part-nav-bar class="d-flex justify-content-around"></app-visitor-right-part-nav-bar>
+</ng-template>

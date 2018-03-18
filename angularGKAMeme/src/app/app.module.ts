@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
-import {RouterModule, Routes} from "@angular/router";
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from "@angular/router";
+import { FormsModule } from "@angular/forms";
+
 
 import { AppComponent } from './app.component';
 import { FileuploaderComponent } from './fileuploader/fileuploader.component';
@@ -10,7 +12,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { MainNavBarComponent } from './main-nav-bar/main-nav-bar.component';
 import { IndexComponent } from './index/index.component';
 import { SignInComponent } from './sign-in/sign-in.component';
-
+import { UserLoggedRightPartNavBarComponent } from './user-logged-right-part-nav-bar/user-logged-right-part-nav-bar.component';
+import { VisitorRightPartNavBarComponent } from './visitor-right-part-nav-bar/visitor-right-part-nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { SignInComponent } from './sign-in/sign-in.component';
     GalleryComponent,
     MainNavBarComponent,
     IndexComponent,
-    SignInComponent
+    SignInComponent,
+    UserLoggedRightPartNavBarComponent,
+    VisitorRightPartNavBarComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
       {path: "index", component:IndexComponent},
       {path: "SignIn", component:SignInComponent}

@@ -58,12 +58,24 @@ class User
      */
     private $status;
 
+
+    /**
+     * @ORM\ManyToOne(targetEntity="File")
+     * @ORM\JoinColumn(name="avatar", nullable=TRUE, referencedColumnName="File_id")
+     */
+    private $avatar;
+
     /**
      * One User has Many Files.
      * @ORM\OneToMany(targetEntity="File", mappedBy="uploader")
      */
     private $files;
 
+    /**
+     * Many User has Many Favorites Files.
+     * @ORM\ManyToMany(targetEntity="File", mappedBy="uploader")
+     */
+    private $favorites;
 
     public function __construct() {
         $this->files = new \Doctrine\Common\Collections\ArrayCollection();
