@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-main-nav-bar',
-  templateUrl: './main-nav-bar.component.html',
-  styleUrls: ['./main-nav-bar.component.css']
+  selector: 'app-nav-bar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
-export class MainNavBarComponent implements OnInit {
+export class NavBarComponent implements OnInit {
 
-  logged = <boolean> true;
+  logged = <boolean> false;
   faUserDropdown = <string> "Memers" ;
 
   constructor() { }

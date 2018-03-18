@@ -9,23 +9,24 @@ import { AppComponent } from './app.component';
 import { FileuploaderComponent } from './fileuploader/fileuploader.component';
 import { HeaderComponent } from './header/header.component';
 import { GalleryComponent } from './gallery/gallery.component';
-import { MainNavBarComponent } from './main-nav-bar/main-nav-bar.component';
+import {NavBarComponent, NavBarComponent} from './navbar/navbar.component';
 import { IndexComponent } from './index/index.component';
 import { SignInComponent } from './sign-in/sign-in.component';
-import { UserLoggedRightPartNavBarComponent } from './user-logged-right-part-nav-bar/user-logged-right-part-nav-bar.component';
-import { VisitorRightPartNavBarComponent } from './visitor-right-part-nav-bar/visitor-right-part-nav-bar.component';
+import { UserLoggedRightPartNavBarComponent } from './navbar/user-logged-right-part-nav-bar/user-logged-right-part-nav-bar.component';
+import { VisitorRightPartNavBarComponent } from './navbar/visitor-right-part-nav-bar/visitor-right-part-nav-bar.component';
+import { BtnGroupSearchbarComponent } from './navbar/btn-group-searchbar/btn-group-searchbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FileuploaderComponent,
     HeaderComponent,
-    GalleryComponent,
-    MainNavBarComponent,
+    NavBarComponent,
     IndexComponent,
     SignInComponent,
     UserLoggedRightPartNavBarComponent,
-    VisitorRightPartNavBarComponent
+    VisitorRightPartNavBarComponent,
+    BtnGroupSearchbarComponent
   ],
   imports: [
     BrowserModule,

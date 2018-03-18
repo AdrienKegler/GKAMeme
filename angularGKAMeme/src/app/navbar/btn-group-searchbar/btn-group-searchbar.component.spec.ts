@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainNavBarComponent } from './main-nav-bar.component';
+import { BtnGroupSearchbarComponent } from './btn-group-searchbar.component';
 
-describe('MainNavBarComponent', () => {
-  let component: MainNavBarComponent;
-  let fixture: ComponentFixture<MainNavBarComponent>;
+describe('BtnGroupSearchbarComponent', () => {
+  let component: BtnGroupSearchbarComponent;
+  let fixture: ComponentFixture<BtnGroupSearchbarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainNavBarComponent ]
+      declarations: [ BtnGroupSearchbarComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainNavBarComponent);
+    fixture = TestBed.createComponent(BtnGroupSearchbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
