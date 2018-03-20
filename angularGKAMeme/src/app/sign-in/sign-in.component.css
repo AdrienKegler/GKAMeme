@@ -1,3 +1,53 @@
+
+
+:host{/* ici = 'div' <app-sign-in></app-sign-in> */
+  flex-grow: 2;
+  display: flex;
+
+}
+
+.signIn-container{
+
+}
+
+#CentralBlockContainer{
+  width: 65vmin;
+  height: 65vmin;
+  background: #530080;
+  border: 1vw solid #530080;
+  border-radius: 7vh;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+}
+
+#PictureLeft{
+  height: 100%;
+  overflow: hidden;
+  flex: 4;
+
+  position: relative;
+}
+
+#PictureLeft > img{
+  height: 100%;
+  /* Avec position: relative; de #PictureLeft, permet de centrer l'image */
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+}
+
+#rightForm{
+  flex: 7;
+  background: #530080;
+}
+
+
 /*Bootstrap -xl*/
 @media (min-width: 1200px) {
 
@@ -14,11 +64,15 @@
 }
 
 /*Bootstrap -sm*/
-@media (min-width: 576px) and (max-width: 767px) {
+@media (max-width: 767px) {
+  #CentralBlockContainer{
+    border:unset;
+    flex-direction: column;
+  }
 
+  #PictureLeft > img {
+    height: auto;
+    width: 100%;
+  }
 }
 
-/*Bootstrap -xs/none */
-@media (max-width: 575px) {
-
-}
