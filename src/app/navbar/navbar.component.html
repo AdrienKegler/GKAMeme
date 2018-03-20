@@ -13,7 +13,7 @@
         <a class="nav-link my-auto p-0 navbar-text" routerLink="/{{ faUserDropdown }}">
           <i class="fa fa-users"></i> {{ faUserDropdown }}
         </a>
-        <a class="nav-link dropdown-toggle my-auto p-0 navbar-text" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle my-auto p-0 navbar-text" routerLink="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" (click)="updateFaUserDropdown('Memers')" routerLink="/Memers">Memers</a>
@@ -27,7 +27,7 @@
 
     <!-- Logo center-->
     <ul class="navbar-nav col-sm-4">
-      <a class="navbar-brand d-block m-auto" href="/index">
+      <a class="navbar-brand d-block m-auto" routerLink="/index">
         <img class="navbar-logo mx-auto d-block" src="assets/Pictures/G KA meme logo small.png">
       </a>
     </ul>
