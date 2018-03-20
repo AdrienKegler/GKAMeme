@@ -1,37 +1,27 @@
-# GIT méchaniques
-Pas de commit direct sur master, mise en place de 3 types de branches : `feature`, `patch`, `hotfix`. Tout code qui souhaite être pushé sur master doit faire l’objet d’une pull request et être revu par un ou plusieurs devs. Git permet facilement de faire ça.
+# AngularGKAMeme
 
-Une PR (pull request) fait l’object d’un message sur slack dans le channel `#dev` avec la notification `@channel` afin que si besoin un thread de discussion y soit ouvert et que chacun soit au courant de ce qui souhaite être mergé sur master.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
 
-*Important* : aucun dev ne devrait lui même merger son propre code sur master !
+## Development server
 
-- Un branche de type feature/ma_jolie_feature est nécessaire lorsque l’on travaille sur une portion de code importante liée à une fonctionnalité
-- Une branche de type patch/mon_joli_patch est une correction non urgente de bug, un refactor, ou modification mineure qui ne nécessite pas de tests significatifs
-- Une branche de type hotfix est comme son nom l’indique un correctif urgent à déployer lors de la prochaine release.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Code scaffolding
 
-# INSTALL
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-First step, you have obviously to clone the repository on you desktop
+## Build
 
-## Apache Setup
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
+## Running unit tests
 
-## Angular server installation (Windows)
-Make sure you've got **npm** installed and set in your PATH environment variable.
-Run your cmd from "*www\GKAMeme\angularGKAMeme*" and do a "***npm install***"
-To run the server, input "***ng serve --host GKAMeme --proxy-config proxy.conf.json --base-href /app/ --disable-host-check***"
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## API REST Symfony installation (Windows)
-Make sure you've got **composer** installed and set in your PATH environment variable.
-Run your cmd from "*www\GKAMeme\phpGKAMeme*" and do a "***composer install***"
-To run the server, launch your wamp
+## Running end-to-end tests
 
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-# LOCAL RUN
-## API server
-Run your wamp
+## Further help
 
-## Angular server
-Run cmd from your angular file (here GKAMeme/angularGKAMeme)
-Run "ng serve"
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
