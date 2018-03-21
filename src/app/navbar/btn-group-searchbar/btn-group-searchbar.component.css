@@ -1,0 +1,47 @@
+:host{
+  display: flex;
+  flex:1;
+}
+
+.btn-group{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.btn-group > input{
+  border-bottom-right-radius: unset;
+  border-top-right-radius: unset;
+
+  min-width: 60%;
+}
+
+#mobileSearchButton{
+  color: white;
+}
+
+/*Bootstrap -xl*/
+@media (min-width: 1200px) {
+
+}
+
+/*Bootstrap -lg*/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/*Bootstrap -md*/
+@media (min-width: 768px) and (max-width: 991px) {
+  :host{
+    flex: 4!important;
+  }
+}
+
+/*Bootstrap -sm*/
+@media (min-width: 576px) and (max-width: 767px) {
+
+}
+
+/*Bootstrap -xs/none */
+@media (max-width: 575px) {
+
+}

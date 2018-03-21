@@ -20,6 +20,14 @@ app-root{
   width: auto;
 }
 
+.btn-secondary{
+  border-color: #ebcb07;
+  background-color: #ebcb07;
+}
+
+.dropdown-item.active, .dropdown-item:active{
+  background-color: #ebcb07;
+}
 
 /*Bootstrap -xl*/
 @media (min-width: 1200px) {

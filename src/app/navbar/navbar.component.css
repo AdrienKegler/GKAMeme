@@ -1,29 +1,68 @@
+
 .navbar-logo{
-  height: 5vh;
+  max-height: 80%;
+  max-width: 80%;
+  min-height: 50%;
 }
+
+ul.navbar-nav{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+ul .navbar-nav:first-child > li { margin-right: auto; }
+
+ul .navbar-nav:last-child  > li { margin-left: auto;  }
+
+.navbar-toggler{
+
+}
+
 
 
 /*Bootstrap -xl*/
 @media (min-width: 1200px) {
-
+  #leftPartNavbarContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
+
 
 /*Bootstrap -lg*/
 @media (min-width: 992px) and (max-width: 1199px) {
+  #leftPartNavbarContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #rightPartNavbarContent{
+    display: flex;
+  }
 
 }
 
 /*Bootstrap -md*/
 @media (min-width: 768px) and (max-width: 991px) {
-
+  #leftPartNavbar{
+    justify-content: flex-start;
+  }
 }
 
 /*Bootstrap -sm*/
 @media (min-width: 576px) and (max-width: 767px) {
-
+    #leftPartNavbar{
+    justify-content: flex-start;
+  }
 }
 
 /*Bootstrap -xs/none */
 @media (max-width: 575px) {
-
+  #leftPartNavbar{
+    justify-content: space-around;
+  }
 }
