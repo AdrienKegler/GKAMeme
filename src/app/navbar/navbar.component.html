@@ -1,60 +1,89 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0 d-flex flex-row">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0 d-flex flex-column">
 
-  <!--Left Group-->
-  <ul id="leftPartNavbar" class="navbar-nav px-2 d-flex">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#leftPartNavbarContent" aria-controls="leftPartNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="leftPartNavbarContent" class="collapse navbar-collapse">
-      <li class="nav-item d-flex navbar-text">
-        <a class="nav-link my-auto" routerLink="/random">
-          <i class="fa d-none d-xl-inline-flex fa-random"></i> Random
-        </a>
-      </li>
-      <li class="nav-item d-flex navbar-text">
-        <a class="nav-link my-auto" routerLink="/tags">
-          <i class="fa d-none d-xl-inline-flex fa-tags"></i> Tags
-        </a>
-      </li>
-      <li class="nav-item dropdown d-none d-lg-flex">
-        <a class="nav-link my-auto p-0 navbar-text" routerLink="/{{ faUserDropdown }}">
-          <i class="fa d-none d-xl-inline-flex fa-users"></i> {{ faUserDropdown }}
-        </a>
-        <a class="nav-link dropdown-toggle my-auto p-0 navbar-text" routerLink="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" (click)="updateFaUserDropdown('Memers')" routerLink="/Memers">Memers</a>
-          <a class="dropdown-item" (click)="updateFaUserDropdown('Groups')" routerLink="/Groups">Groups</a>
-        </div>
-      </li>
-      <li class="nav-item d-flex navbar-text d-lg-none">
-        <a class="nav-link my-auto" routerLink="/Memers">Memers</a>
-      </li>
-      <li class="nav-item d-flex navbar-text d-lg-none">
-        <a class="nav-link my-auto" routerLink="/Groups">Groups</a>
-      </li>
-      <li class="nav-item d-flex navbar-text">
-        <a class="nav-link my-auto" routerLink="/info">
-          <i class="fa d-none d-xl-inline-flex fa-info-circle"></i> Info
-        </a>
-      </li>
-    </div>
-  </ul>
+  <div id="navRowMobile" class="w-100 d-flex flex-row">
+    <ul id="leftMobileNavbar" class="partMobileNavbar navbar-nav px-2 d-flex">
+      <button class="navbar-toggler" type="button"
+              data-toggle="collapse" data-target="#leftPartNavbarContent"
+              aria-controls="leftPartNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </ul>
 
-  <!-- Logo center-->
-  <ul id="logoContainerPartNavbar" class="navbar-nav">
-    <a class="navbar-brand d-block m-auto" routerLink="/index">
-      <img class="navbar-logo mx-auto d-none d-sm-block" src="assets/Pictures/G KA meme logo small.png">
+    <ul id="centerMobileNavbar" class="partMobileNavbar navbar-nav px-2 d-flex">
       <img class="navbar-logo mx-auto d-block d-sm-none" src="assets/Pictures/GKM icon.png">
-    </a>
-  </ul>
+    </ul>
+
+    <ul id="rightMobileNavbar" class="partMobileNavbar navbar-nav px-2 d-flex">
+      <button class="navbar-toggler" type="button"
+              data-toggle="collapse" data-target="#navSearchbar"
+              aria-controls="navSearchbar" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-search"></i>
+        <p class="m-0">Search</p>
+      </button>
+
+      <li class="nav-item d-flex d-lg-none">
+        <a class="nav-link my-auto p-0 navbar-text" routerLink="/SignIn">
+          <h3><i class="fa fa-sign-in-alt"></i></h3>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- navRowDesktop car visible en desktop mais il s'agit aussi du contenu déployé par les burgers en mobile -->
+  <div id="navRowDesktop" class="d-flex w-100">
+
+    <!--Left Group-->
+    <ul id="leftPartNavbar" class="navbar-nav px-2 d-flex">
+      <div id="leftPartNavbarContent" class="collapse navbar-collapse">
+        <li class="nav-item d-flex navbar-text">
+          <a class="nav-link my-auto" routerLink="/random">
+            <i class="fa d-none d-xl-inline-flex fa-random"></i> Random
+          </a>
+        </li>
+        <li class="nav-item d-flex navbar-text">
+          <a class="nav-link my-auto" routerLink="/tags">
+            <i class="fa d-none d-xl-inline-flex fa-tags"></i> Tags
+          </a>
+        </li>
+        <li class="nav-item dropdown d-none d-lg-flex">
+          <a class="nav-link my-auto p-0 navbar-text" routerLink="/{{ faUserDropdown }}">
+            <i class="fa d-none d-xl-inline-flex fa-users"></i> {{ faUserDropdown }}
+          </a>
+          <a class="nav-link dropdown-toggle my-auto p-0 navbar-text" routerLink="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" (click)="updateFaUserDropdown('Memers')" routerLink="/Memers">Memers</a>
+            <a class="dropdown-item" (click)="updateFaUserDropdown('Groups')" routerLink="/Groups">Groups</a>
+          </div>
+        </li>
+        <li class="nav-item d-flex navbar-text d-lg-none">
+          <a class="nav-link my-auto" routerLink="/Memers">Memers</a>
+        </li>
+        <li class="nav-item d-flex navbar-text d-lg-none">
+          <a class="nav-link my-auto" routerLink="/Groups">Groups</a>
+        </li>
+        <li class="nav-item d-flex navbar-text">
+          <a class="nav-link my-auto" routerLink="/info">
+            <i class="fa d-none d-xl-inline-flex fa-info-circle"></i> Info
+          </a>
+        </li>
+      </div>
+    </ul>
+
+    <!-- Logo center-->
+    <ul id="logoContainerPartNavbar" class="navbar-nav">
+      <a class="navbar-brand d-block m-auto" routerLink="/index">
+        <img class="navbar-logo mx-auto d-none d-sm-block" src="assets/Pictures/G KA meme logo small.png">
+      </a>
+    </ul>
 
 
-  <!--Right group-->
-  <ul id="rightPartNavbar" class="navbar-nav px-2 d-flex justify-content-around">
-    <app-btn-group-searchbar></app-btn-group-searchbar>
-    <app-user-logged-right-part-nav-bar *ngIf="logged; else visitorTmpl"></app-user-logged-right-part-nav-bar>
-  </ul>
+    <!--Right group-->
+    <ul id="rightPartNavbar" class="navbar-nav px-2 d-flex justify-content-around">
+      <app-btn-group-searchbar></app-btn-group-searchbar>
+      <app-user-logged-right-part-nav-bar *ngIf="logged; else visitorTmpl"></app-user-logged-right-part-nav-bar>
+    </ul>
+  </div>
 </nav>
 
 

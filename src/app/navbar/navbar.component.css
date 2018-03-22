@@ -1,3 +1,8 @@
+#navRowDesktop{
+  flex-direction: row;
+}
+
+
 
 .navbar-logo{
   max-height: 80%;
@@ -49,20 +54,62 @@ ul .navbar-nav:last-child  > li { margin-left: auto;  }
 /*Bootstrap -md*/
 @media (min-width: 768px) and (max-width: 991px) {
   #leftPartNavbar{
+    flex-direction: column;
     justify-content: flex-start;
   }
 }
 
 /*Bootstrap -sm*/
 @media (min-width: 576px) and (max-width: 767px) {
-    #leftPartNavbar{
+  #leftPartNavbar{
+      flex-direction: column;
     justify-content: flex-start;
   }
 }
 
 /*Bootstrap -xs/none */
 @media (max-width: 575px) {
+
+  #navRowDesktop{
+    flex-direction: column-reverse;
+  }
+
+  ul.navbar-nav{
+    flex: unset;
+  }
+
   #leftPartNavbar{
+    flex: 1;
+    flex-direction: column;
     justify-content: space-around;
+  }
+  #rightPartNavbar{
+    flex: 4;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .partMobileNavbar{
+    flex: 2!important;
+  }
+
+  #centerMobileNavbar{
+    flex: 1!important;
+    max-height: 15vmin;
+    padding: .5rem!important;
+  }
+
+  .navbar-logo{
+    width: auto;
+    height: auto;
+
+    min-height: unset;
+
+    margin: auto;
+  }
+
+  .navbar-brand.d-block.m-auto{
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
