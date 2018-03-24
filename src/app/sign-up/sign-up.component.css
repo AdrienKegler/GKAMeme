@@ -1,6 +1,6 @@
 
 
-:host{/* ici = 'div' <app-sign-in></app-sign-in> */
+:host{/* ici = 'div' <app-sign-up></app-sign-up> */
   flex-grow: 2;
   display: flex;
 
@@ -11,8 +11,11 @@
 }
 
 #CentralBlockContainer{
+  min-width: 65vmin;
   width: 65vmin;
   height: 65vmin;
+  min-height: 65vmin;
+  max-height: 65vmin;
   background: #530080;
   border: 1vw solid #530080;
   border-radius: 7vh;
@@ -68,6 +71,16 @@
   #CentralBlockContainer{
     border:unset;
     flex-direction: column;
+    max-height: 80vh;
+    margin-top: 1em!important;
+  }
+
+  #PictureLeft{
+    flex: 3;
+  }
+
+  #rightForm{
+    flex: 15;
   }
 
   #PictureLeft > img {

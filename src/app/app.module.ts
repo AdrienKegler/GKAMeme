@@ -12,9 +12,10 @@ import { FileuploaderComponent } from './fileuploader/fileuploader.component';
 import { HeaderComponent } from './header/header.component';
 import { IndexComponent } from './index/index.component';
 import { NavBarComponent } from './navbar/navbar.component';
-import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserLoggedRightPartNavBarComponent } from './navbar/user-logged-right-part-nav-bar/user-logged-right-part-nav-bar.component';
 import { VisitorRightPartNavBarComponent } from './navbar/visitor-right-part-nav-bar/visitor-right-part-nav-bar.component';
+import { SignInFormComponent } from './sign-up/sign-up-form/sign-up-form.component';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,10 @@ import { VisitorRightPartNavBarComponent } from './navbar/visitor-right-part-nav
     HeaderComponent,
     IndexComponent,
     NavBarComponent,
-    SignInComponent,
+    SignUpComponent,
     UserLoggedRightPartNavBarComponent,
-    VisitorRightPartNavBarComponent
+    VisitorRightPartNavBarComponent,
+    SignInFormComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -35,7 +37,7 @@ import { VisitorRightPartNavBarComponent } from './navbar/visitor-right-part-nav
     HttpClientModule,
     RouterModule.forRoot([
       {path: "index", component:IndexComponent},
-      {path: "SignIn", component:SignInComponent}
+      {path: "register", component:SignUpComponent}
     ])
   ],
   providers: [],

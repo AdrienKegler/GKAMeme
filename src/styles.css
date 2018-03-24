@@ -29,6 +29,30 @@ app-root{
   background-color: #ebcb07;
 }
 
+.text-primary-color{
+  color: #13001f;
+}
+.text-secondary-color{
+  color: #ebcb07;
+}
+.text-tierce-color{
+  color: #ff0000;
+}
+
+.border-0:active, .border-0:focus{
+  border:none!important;
+  outline:none;
+}
+
+@font-face{
+  font-family: "Cooper Black";
+  src: url(/assets/fonts/COOPBL.TTF) format("Serif");
+}
+
+.CopperBlack{
+  font-family: "Cooper Black";
+}
+
 /*Bootstrap -xl*/
 @media (min-width: 1200px) {
 

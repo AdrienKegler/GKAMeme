@@ -38,10 +38,21 @@
 
 /*Bootstrap -sm*/
 @media (min-width: 576px) and (max-width: 767px) {
+  #searchBarBtnGrp{
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 
 }
 
 /*Bootstrap -xs/none */
 @media (max-width: 575px) {
+
+  #searchBarBtnGrp{
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 
 }

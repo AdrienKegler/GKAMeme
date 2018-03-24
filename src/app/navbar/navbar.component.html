@@ -2,28 +2,27 @@
 
   <div id="navRowMobile" class="w-100 d-flex flex-row">
     <ul id="leftMobileNavbar" class="partMobileNavbar navbar-nav px-2 d-flex">
-      <button class="navbar-toggler" type="button"
+      <button id="mobileNavBurger" class="navbar-toggler border-0 p-0" type="button"
               data-toggle="collapse" data-target="#leftPartNavbarContent"
               aria-controls="leftPartNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon m-2"></span>
       </button>
     </ul>
 
     <ul id="centerMobileNavbar" class="partMobileNavbar navbar-nav px-2 d-flex">
-      <img class="navbar-logo mx-auto d-block d-sm-none" src="assets/Pictures/GKM icon.png">
+      <img id="navbar-logo" class="navbar-logo p-0 mx-0 my-auto d-block d-sm-none" src="assets/Pictures/G KA meme logo small.png">
     </ul>
 
-    <ul id="rightMobileNavbar" class="partMobileNavbar navbar-nav px-2 d-flex">
-      <button class="navbar-toggler" type="button"
+    <ul id="rightMobileNavbar" class="partMobileNavbar navbar-nav p-0 d-flex justify-content-around">
+      <button class="navbar-toggler border-0 my-auto p-0" type="button"
               data-toggle="collapse" data-target="#navSearchbar"
               aria-controls="navSearchbar" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa fa-search"></i>
-        <p class="m-0">Search</p>
+        <i class="fa fa-search m-3"></i>
       </button>
 
-      <li class="nav-item d-flex d-lg-none">
+      <li class="nav-item d-flex d-lg-none mx-3">
         <a class="nav-link my-auto p-0 navbar-text" routerLink="/SignIn">
-          <h3><i class="fa fa-sign-in-alt"></i></h3>
+          <h3 class="m-0"><i class="fa fa-sign-in-alt"></i></h3>
         </a>
       </li>
     </ul>
@@ -45,8 +44,8 @@
             <i class="fa d-none d-xl-inline-flex fa-tags"></i> Tags
           </a>
         </li>
-        <li class="nav-item dropdown d-none d-lg-flex">
-          <a class="nav-link my-auto p-0 navbar-text" routerLink="/{{ faUserDropdown }}">
+        <li class="nav-item dropdown py-2 d-none d-lg-flex">
+          <a class="nav-link my-auto navbar-text" routerLink="/{{ faUserDropdown }}">
             <i class="fa d-none d-xl-inline-flex fa-users"></i> {{ faUserDropdown }}
           </a>
           <a class="nav-link dropdown-toggle my-auto p-0 navbar-text" routerLink="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -72,8 +71,8 @@
 
     <!-- Logo center-->
     <ul id="logoContainerPartNavbar" class="navbar-nav">
-      <a class="navbar-brand d-block m-auto" routerLink="/index">
-        <img class="navbar-logo mx-auto d-none d-sm-block" src="assets/Pictures/G KA meme logo small.png">
+      <a id="desktopIndexLink" class="navbar-brand d-flex" routerLink="/index">
+        <img id="horizontalLogo" class="navbar-logo my-auto d-none d-sm-inline-flex" src="assets/Pictures/G KA meme logo small.png">
       </a>
     </ul>
 
