@@ -1,6 +1,24 @@
-<form id="sign-in-form" class="mx-2">
+<form id="sign-in-form" class="mx-2 d-flex flex-column justify-content-around h-100" (ngSubmit)="onSubmit()">
   <div class="form-group">
-    <label class="text-secondary-color font-weight-bold" for="signInEmail">E-mail</label>
-    <input type="email" class="form-control" id="signInEmail" placeholder="Login">
+    <input ngModel type="email" class="form-control form-control-sm" id="signInEmail" name="signInEmail" placeholder="E-mail" [(ngModel)]="email" required>
   </div>
+  <div class="form-group">
+    <input ngModel type="text" class="form-control form-control-sm" id="signInFirstName" name="signInFirstName" placeholder="FirstName" [(ngModel)]="firstName" required>
+  </div>
+  <div class="form-group">
+    <input ngModel type="text" class="form-control form-control-sm" id="signInName" name="signInName" placeholder="Name" [(ngModel)]="name" required>
+  </div>
+  <div class="form-group">
+    <div class="d-flex justify-content-between">
+      <label class="text-secondary-color font-weight-bold align-middle w-50 my-auto" for="signInBirthday">Birthday :</label>
+      <input ngModel type="date" class="form-control form-control-sm" id="signInBirthday" name="signInBirthday" placeholder="birthday" [(ngModel)]="birthday" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <input ngModel type="password" class="form-control form-control-sm" id="signInPassword" name="signInPassword" placeholder="password" [(ngModel)]="password" required>
+  </div>
+  <div class="form-group">
+    <input ngModel type="password" class="form-control form-control-sm" id="signInConfirmPassword" name="signInConfirmPassword" placeholder="confirm password" [(ngModel)]="confirmPassword" required>
+  </div>
+  <input type="submit">
 </form>

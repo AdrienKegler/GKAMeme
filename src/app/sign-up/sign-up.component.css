@@ -6,8 +6,9 @@
 
 }
 
-.signIn-container{
-
+#rightForm{
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #CentralBlockContainer{

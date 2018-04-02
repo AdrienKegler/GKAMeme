@@ -34,17 +34,17 @@
     <!--Left Group-->
     <ul id="leftPartNavbar" class="navbar-nav px-2 d-flex">
       <div id="leftPartNavbarContent" class="collapse navbar-collapse">
-        <li class="nav-item d-flex navbar-text">
+        <li class="nav-item h-100 d-flex navbar-text">
           <a class="nav-link my-auto" routerLink="/random">
             <i class="fa d-none d-xl-inline-flex fa-random"></i> Random
           </a>
         </li>
-        <li class="nav-item d-flex navbar-text">
+        <li class="nav-item h-100 d-flex navbar-text">
           <a class="nav-link my-auto" routerLink="/tags">
             <i class="fa d-none d-xl-inline-flex fa-tags"></i> Tags
           </a>
         </li>
-        <li class="nav-item dropdown py-2 d-none d-lg-flex">
+        <li class="nav-item h-100 dropdown py-2 d-none d-lg-flex">
           <a class="nav-link my-auto navbar-text" routerLink="/{{ faUserDropdown }}">
             <i class="fa d-none d-xl-inline-flex fa-users"></i> {{ faUserDropdown }}
           </a>
@@ -55,13 +55,13 @@
             <a class="dropdown-item" (click)="updateFaUserDropdown('Groups')" routerLink="/Groups">Groups</a>
           </div>
         </li>
-        <li class="nav-item d-flex navbar-text d-lg-none">
+        <li class="nav-item h-100 d-flex navbar-text d-lg-none">
           <a class="nav-link my-auto" routerLink="/Memers">Memers</a>
         </li>
-        <li class="nav-item d-flex navbar-text d-lg-none">
+        <li class="nav-item h-100 d-flex navbar-text d-lg-none">
           <a class="nav-link my-auto" routerLink="/Groups">Groups</a>
         </li>
-        <li class="nav-item d-flex navbar-text">
+        <li class="nav-item h-100 d-flex navbar-text">
           <a class="nav-link my-auto" routerLink="/info">
             <i class="fa d-none d-xl-inline-flex fa-info-circle"></i> Info
           </a>

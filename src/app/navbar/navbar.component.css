@@ -16,7 +16,7 @@ button[aria-expanded="true"]{
 
 
 ul.navbar-nav{
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -27,7 +27,6 @@ ul .navbar-nav:first-child > li { margin-right: auto; }
 ul .navbar-nav:last-child  > li { margin-left: auto;  }
 
 li.nav-item:hover{
-  border-radius: 1vmin;
   background-color: #2a2e33;
 }
 

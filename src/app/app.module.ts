@@ -1,11 +1,16 @@
+// Modules
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from "@angular/forms";
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpInterceptor, HttpHandler, HttpRequest, HttpResponse } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
 
+// Services
+import { ApiService } from './api.service'
 
+
+// Components
 import { AppComponent } from './app.component';
 import { BtnGroupSearchbarComponent } from './navbar/btn-group-searchbar/btn-group-searchbar.component';
 import { FileuploaderComponent } from './fileuploader/fileuploader.component';
@@ -40,7 +45,7 @@ import { SignInFormComponent } from './sign-up/sign-up-form/sign-up-form.compone
       {path: "register", component:SignUpComponent}
     ])
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
