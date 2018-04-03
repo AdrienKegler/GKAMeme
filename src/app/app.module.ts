@@ -3,9 +3,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule, HttpInterceptor, HttpHandler, HttpRequest, HttpResponse } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
-
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 // Services
 import { ApiService } from './api.service'
 
@@ -39,12 +39,14 @@ import { SignInFormComponent } from './sign-up/sign-up-form/sign-up-form.compone
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
+    MDBBootstrapModule.forRoot(),
     HttpClientModule,
     RouterModule.forRoot([
       {path: "index", component:IndexComponent},
       {path: "register", component:SignUpComponent}
     ])
   ],
+  schemas: [NO_ERRORS_SCHEMA],
   providers: [ApiService],
   bootstrap: [AppComponent]
 })
