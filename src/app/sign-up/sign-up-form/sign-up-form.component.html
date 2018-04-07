@@ -1,24 +1,27 @@
 <form id="sign-in-form" class="mx-2 d-flex flex-column justify-content-around h-100" (ngSubmit)="onSubmit()">
   <div class="form-group">
-    <input ngModel type="email" class="form-control form-control-sm" id="signInEmail" name="signInEmail" placeholder="E-mail" [(ngModel)]="email" required>
+    <input ngModel type="email" class="form-control form-control-sm" id="signInEmail" name="signInEmail" [(ngModel)]="email" mdbActive required>
+    <label for="signInEmail">E-mail</label>
   </div>
   <div class="form-group">
-    <input ngModel type="text" class="form-control form-control-sm" id="signInFirstName" name="signInFirstName" placeholder="FirstName" [(ngModel)]="firstName" required>
+    <input ngModel type="text" class="form-control form-control-sm" id="signInFirstName" name="signInFirstName" [(ngModel)]="firstName" mdbActive required>
+    <label for="signInFirstName">FirstName</label>
   </div>
   <div class="form-group">
-    <input ngModel type="text" class="form-control form-control-sm" id="signInName" name="signInName" placeholder="Name" [(ngModel)]="name" required>
+    <input ngModel type="text" class="form-control form-control-sm" id="signInName" name="signInName" [(ngModel)]="name" mdbActive required>
+    <label for="signInName">Name</label>
   </div>
   <div class="form-group">
     <div class="d-flex justify-content-between">
-      <label class="text-secondary-color font-weight-bold align-middle w-50 my-auto" for="signInBirthday">Birthday :</label>
+      <label class="text-secondary-color font-weight-bold align-middle w-50 my-auto" for="signInBirthday">Birthday</label>
       <input ngModel type="date" class="form-control form-control-sm" id="signInBirthday" name="signInBirthday" placeholder="birthday" [(ngModel)]="birthday" required>
     </div>
   </div>
   <div class="form-group">
-    <input ngModel type="password" class="form-control form-control-sm" id="signInPassword" name="signInPassword" placeholder="password" [(ngModel)]="password" required>
+    <input ngModel type="password" class="form-control form-control-sm" id="signInPassword" name="signInPassword" password [(ngModel)]="password" mdbActive required>
   </div>
   <div class="form-group">
-    <input ngModel type="password" class="form-control form-control-sm" id="signInConfirmPassword" name="signInConfirmPassword" placeholder="confirm password" [(ngModel)]="confirmPassword" required>
+    <input ngModel type="password" class="form-control form-control-sm" id="signInConfirmPassword" name="signInConfirmPassword" confirm password [(ngModel)]="confirmPassword" mdbActive required>
   </div>
   <input type="submit">
 </form>

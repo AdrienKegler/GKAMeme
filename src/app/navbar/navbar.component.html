@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0 d-flex flex-column">
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-dark p-0 d-flex flex-column">
 
   <div id="navRowMobile" class="w-100 d-flex flex-row">
     <ul id="leftMobileNavbar" class="partMobileNavbar navbar-nav px-2 d-flex">
@@ -70,11 +70,11 @@
     </ul>
 
     <!-- Logo center-->
-    <ul id="logoContainerPartNavbar" class="navbar-nav">
+    <logo id="logoContainerPartNavbar" class="navbar-nav">
       <a id="desktopIndexLink" class="navbar-brand d-flex" routerLink="/index">
         <img id="horizontalLogo" class="navbar-logo my-auto d-none d-sm-inline-flex" src="assets/Pictures/G KA meme logo small.png">
       </a>
-    </ul>
+    </logo>
 
 
     <!--Right group-->
@@ -83,7 +83,7 @@
       <app-user-logged-right-part-nav-bar *ngIf="logged; else visitorTmpl"></app-user-logged-right-part-nav-bar>
     </ul>
   </div>
-</nav>
+</mdb-navbar>
 
 
 <ng-template #visitorTmpl>
