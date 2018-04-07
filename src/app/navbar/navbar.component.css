@@ -24,10 +24,15 @@ ul.navbar-nav{
 
 ul .navbar-nav:first-child > li { margin-right: auto; }
 
-ul .navbar-nav:last-child  > li { margin-left: auto;  }
+ul .navbar-nav:last-child  > li { margin-left: auto; }
 
 li.nav-item:hover{
   background-color: #2a2e33;
+}
+
+
+.navbar-text{
+  padding: 0.5em;
 }
 
 /*Bootstrap -xl*/
