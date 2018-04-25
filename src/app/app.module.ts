@@ -12,7 +12,6 @@ import { ApiService } from './api.service'
 
 // Components
 import { AppComponent } from './app.component';
-import { BtnGroupSearchbarComponent } from './navbar/btn-group-searchbar/btn-group-searchbar.component';
 import { FileuploaderComponent } from './fileuploader/fileuploader.component';
 import { HeaderComponent } from './header/header.component';
 import { IndexComponent } from './index/index.component';
@@ -25,7 +24,6 @@ import { SignInFormComponent } from './sign-up/sign-up-form/sign-up-form.compone
 @NgModule({
   declarations: [
     AppComponent,
-    BtnGroupSearchbarComponent,
     FileuploaderComponent,
     HeaderComponent,
     IndexComponent,

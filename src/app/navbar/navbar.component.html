@@ -1,73 +1,41 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0 d-flex flex-column">
-
-  <div id="navRowMobile" class="w-100 d-flex flex-row">
-    <ul id="leftMobileNavbar" class="partMobileNavbar navbar-nav px-2 d-flex">
-      <button id="mobileNavBurger" class="navbar-toggler border-0 p-0" type="button"
-              data-toggle="collapse" data-target="#leftPartNavbarContent"
-              aria-controls="leftPartNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon m-2"></span>
-      </button>
-    </ul>
-
-    <ul id="centerMobileNavbar" class="partMobileNavbar navbar-nav px-2 d-flex">
-      <img id="navbar-logo" class="navbar-logo p-0 mx-0 my-auto d-block d-sm-none" src="assets/Pictures/G KA meme logo small.png">
-    </ul>
-
-    <ul id="rightMobileNavbar" class="partMobileNavbar navbar-nav p-0 d-flex justify-content-around">
-      <button class="navbar-toggler border-0 my-auto p-0" type="button"
-              data-toggle="collapse" data-target="#navSearchbar"
-              aria-controls="navSearchbar" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa fa-search m-3"></i>
-      </button>
-
-      <li class="nav-item d-flex d-lg-none mx-3">
-        <a class="nav-link my-auto p-0 navbar-text" routerLink="/SignIn">
-          <h3 class="m-0"><i class="fa fa-sign-in-alt"></i></h3>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <!-- navRowDesktop car visible en desktop mais il s'agit aussi du contenu déployé par les burgers en mobile -->
-  <div id="navRowDesktop" class="d-flex w-100">
+<div class="container">
+  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-dark">
 
     <!--Left Group-->
-    <ul id="leftPartNavbar" class="navbar-nav px-2 d-flex">
-      <div id="leftPartNavbarContent" class="collapse navbar-collapse">
-        <li class="nav-item h-100 d-flex navbar-text">
-          <a class="nav-link my-auto" routerLink="/random">
-            <i class="fa d-none d-xl-inline-flex fa-random"></i> Random
+    <links>
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/random" mdbRippleRadius>
+          <i class="fa fa-random"></i> Random
+        </a>
+        <a class="nav-item nav-link" routerLink="/tags" mdbRippleRadius>
+          <i class="fa fa-tags"></i> Tags
+        </a>
+        <div class="nav-item navbar-text dropdown btn-group" dropdown>
+          <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
+            <span class="caret"><i class="fa fa-users"></i> {{ faUserDropdown }}</span>
           </a>
-        </li>
-        <li class="nav-item h-100 d-flex navbar-text">
-          <a class="nav-link my-auto" routerLink="/tags">
-            <i class="fa d-none d-xl-inline-flex fa-tags"></i> Tags
-          </a>
-        </li>
-        <li class="nav-item h-100 dropdown py-2 d-none d-lg-flex">
-          <a class="nav-link my-auto navbar-text" routerLink="/{{ faUserDropdown }}">
-            <i class="fa d-none d-xl-inline-flex fa-users"></i> {{ faUserDropdown }}
-          </a>
-          <a class="nav-link dropdown-toggle my-auto p-0 navbar-text" routerLink="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" (click)="updateFaUserDropdown('Memers')" routerLink="/Memers">Memers</a>
-            <a class="dropdown-item" (click)="updateFaUserDropdown('Groups')" routerLink="/Groups">Groups</a>
+          <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary">
+            <a class="dropdown-item waves-light" (click)="updateFaUserDropdown('Memers')" routerLink="/Memers" mdbRippleRadius>Memers</a>
+            <a class="dropdown-item waves-light" (click)="updateFaUserDropdown('Groups')" routerLink="/Groups" mdbRippleRadius>Groups</a>
           </div>
-        </li>
-        <li class="nav-item h-100 d-flex navbar-text d-lg-none">
-          <a class="nav-link my-auto" routerLink="/Memers">Memers</a>
-        </li>
-        <li class="nav-item h-100 d-flex navbar-text d-lg-none">
-          <a class="nav-link my-auto" routerLink="/Groups">Groups</a>
-        </li>
-        <li class="nav-item h-100 d-flex navbar-text">
-          <a class="nav-link my-auto" routerLink="/info">
-            <i class="fa d-none d-xl-inline-flex fa-info-circle"></i> Info
-          </a>
-        </li>
+        </div>
+        <a class="d-flex d-lg-none nav-item nav-link" routerLink="/Memers" mdbRippleRadius>Memers</a>
+        <a class="d-flex d-lg-none nav-item nav-link" routerLink="/Groups" mdbRippleRadius>Groups</a>
+        <a class="nav-item nav-link" routerLink="/info" mdbRippleRadius>
+          <i class="fa d-none d-xl-inline-flex fa-info-circle"></i> Info
+        </a>
       </div>
-    </ul>
+
+      <div class="navbar-nav">
+        <form class="form-inline waves-light" mdbRippleRadius>
+          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success btn-sm my-0 waves-light" type="submit" mdbRippleRadius>Search</button>
+        </form>
+      </div>
+      <div class="navbar-nav">
+        <app-user-logged-right-part-nav-bar *ngIf="logged; else visitorTmpl"></app-user-logged-right-part-nav-bar>
+      </div>
+    </links>
 
     <!-- Logo center-->
     <logo id="logoContainerPartNavbar" class="navbar-nav">
@@ -75,22 +43,11 @@
         <img id="horizontalLogo" class="navbar-logo my-auto d-none d-sm-inline-flex" src="assets/Pictures/G KA meme logo small.png">
       </a>
     </logo>
-
-
-    <!--Right group-->
-    <ul id="rightPartNavbar" class="navbar-nav px-2 d-flex justify-content-around">
-      <li class="nav-item collapse navbar-collapse" id="navSearchbar">
-        <form class="form-inline my-auto" mdbRippleRadius>
-          <div id="searchBarBtnGrp" class="btn-group d-md-flex w-100">
-            <input class="form-control w-100" type="text" placeholder="Search" aria-label="Search">
-          </div>
-        </form>
-      </li>
-      <app-user-logged-right-part-nav-bar *ngIf="logged; else visitorTmpl"></app-user-logged-right-part-nav-bar>
-    </ul>
-  </div>
-</nav>
-
+    <div class="navbar-nav">
+      COUCOU
+    </div>
+  </mdb-navbar>
+</div>
 
 <ng-template #visitorTmpl>
   <app-visitor-right-part-nav-bar class="d-flex justify-content-around"></app-visitor-right-part-nav-bar>

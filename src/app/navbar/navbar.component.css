@@ -1,145 +1,26 @@
-#navRowDesktop{
-  flex-direction: row;
-}
-
-
-
-.navbar-logo{
-  max-height: 80%;
-  min-height: 50%;
-}
-
-
-button[aria-expanded="true"]{
-  background-color: #2a2e33;
-}
-
-
-ul.navbar-nav{
-  flex: 1 1 auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-
-ul .navbar-nav:first-child > li { margin-right: auto; }
-
-ul .navbar-nav:last-child  > li { margin-left: auto; }
-
-li.nav-item:hover{
-  background-color: #2a2e33;
-}
-
-
-.navbar-text{
-  padding: 0.5em;
-}
 
 /*Bootstrap -xl*/
 @media (min-width: 1200px) {
-  #leftPartNavbarContent{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+
 }
 
 
 /*Bootstrap -lg*/
 @media (min-width: 992px) and (max-width: 1199px) {
-  #leftPartNavbarContent{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  #rightPartNavbarContent{
-    display: flex;
-  }
 
 }
 
 /*Bootstrap -md*/
 @media (min-width: 768px) and (max-width: 991px) {
-  #leftPartNavbar{
-    flex-direction: column;
-    justify-content: flex-start;
-  }
+
 }
 
 /*Bootstrap -sm*/
 @media (min-width: 576px) and (max-width: 767px) {
-  #leftPartNavbar{
-    flex-direction: column;
-    justify-content: flex-start;
-  }
 
-  #navSearchbar{
-    margin-top: 2em;
-  }
 }
 
 /*Bootstrap -xs/none */
 @media (max-width: 575px) {
 
-  #desktopIndexLink{
-    padding: 0!important;
-  }
-
-  #navRowDesktop{
-    flex-direction: column-reverse;
-  }
-
-  ul.navbar-nav{
-    flex: unset;
-  }
-
-  #leftPartNavbar{
-    flex: 1;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  #leftMobileNavbar{
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    align-content:flex-start;
-  }
-
-  .partMobileNavbar{
-    flex: 2!important;
-  }
-
-  #centerMobileNavbar{
-    flex: 1!important;
-    max-height: 15vmin;
-    padding: .5rem!important;
-    align-content:center;
-  }
-
-  .navbar-logo{
-    width: auto;
-    height: auto;
-
-    min-height: unset;
-
-    margin: auto;
-  }
-
-  .navbar-logo{
-    height: 10vmin;
-    width: auto;
-  }
-
-  .navbar-brand.d-block.m-auto{
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  #rightPartNavbar{
-    flex: 4;
-    flex-direction: column;
-    justify-content: space-around;
-  }
 }
