@@ -33,7 +33,7 @@
 /*Bootstrap -xs/none */
 @media (max-width: 575px) {
   .img-thumbnail{
-    height: 50vh;
+    max-height: 50vh;
   }
 
 }
