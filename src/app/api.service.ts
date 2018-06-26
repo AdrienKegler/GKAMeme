@@ -1,12 +1,13 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable()
 export class ApiService {
 
-  constructor() { }
+  constructor() {
+  }
 
-  apiOrigin:string = "http://gkameme.org";
-  apiRoot:string = "http://gkameme.org/api/";
-  apiDomain:string = "gkameme.org";
+  apiOrigin = 'http://gkameme.org';
+  apiRoot = 'http://gkameme.org/api/';
+  apiDomain = 'gkameme.org';
 
 }

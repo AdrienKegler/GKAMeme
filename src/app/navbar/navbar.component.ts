@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,14 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class NavBarComponent implements OnInit {
 
   logged = <boolean> false;
-  faUserDropdown = <string> "Memers" ;
+  faUserDropdown = <string> 'Memers';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
-  updateFaUserDropdown(newFaUserDropdownText){
+  updateFaUserDropdown(newFaUserDropdownText) {
     this.faUserDropdown = newFaUserDropdownText;
   }
 

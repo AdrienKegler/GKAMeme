@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-user-logged-right-part-nav-bar',
@@ -8,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class UserLoggedRightPartNavBarComponent implements OnInit {
 
   user = {
-    avatar: <string> "/assets/Pictures/GKM icon.png",
-    username: <string> "ETERN4L DARKNES"
+    avatar: <string> '/assets/Pictures/GKM icon.png',
+    username: <string> 'ETERN4L DARKNES'
   };
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

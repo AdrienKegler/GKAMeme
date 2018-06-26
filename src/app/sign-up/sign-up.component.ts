@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-sign-in',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
 
-  title = <string> "Sign up !";
+  title = <string> 'Sign up !';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

@@ -1,0 +1,39 @@
+
+/*Bootstrap -xl*/
+@media (min-width: 1200px) {
+  .img-thumbnail{
+    height: 35vh;
+  }
+
+}
+
+/*Bootstrap -lg*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .img-thumbnail{
+    height: 35vh;
+  }
+
+}
+
+/*Bootstrap -md*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .img-thumbnail{
+    height: 30vh;
+  }
+
+}
+
+/*Bootstrap -sm*/
+@media (min-width: 576px) and (max-width: 767px) {
+  .img-thumbnail{
+    height: 40vh;
+  }
+}
+
+/*Bootstrap -xs/none */
+@media (max-width: 575px) {
+  .img-thumbnail{
+    height: 50vh;
+  }
+
+}
